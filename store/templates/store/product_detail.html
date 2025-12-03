@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>{{ product.name }} — Зоомагазин</title>
+  <link rel="stylesheet" href="/static/store/style.css">
+</head>
+<body>
+  <header>
+    <h1>{{ product.name }}</h1>
+    <nav><a href="/">Главная</a></nav>
+  </header>
+
+  <main>
+    {% if product.image %}<img class="big" src="{{ product.image }}" alt="{{ product.name }}">{% endif %}
+    <p class="price">Цена: {{ product.price }} грн</p>
+    <div class="desc">{{ product.description }}</div>
+    <p><a href="/">« Назад</a></p>
+  </main>
+
+  <footer>
+    <p>Прототип — магазин для животных.</p>
+  </footer>
+</body>
+</html>

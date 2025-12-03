@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; margin: 20px; color: #222; }
+header { border-bottom: 1px solid #ddd; margin-bottom: 20px; padding-bottom: 10px; }
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.product { border: 1px solid #eee; padding: 10px; border-radius: 8px; background: #fafafa; }
+.product img { max-width: 100%; height: auto; display:block; margin-bottom: 8px; }
+.price { font-weight: bold; color: #2b7a78; }
+img.big { max-width: 400px; display:block; margin-bottom: 12px; }

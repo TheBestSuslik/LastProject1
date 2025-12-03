@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Зоомагазин — Главная</title>
+  <link rel="stylesheet" href="/static/store/style.css">
+</head>
+<body>
+  <header>
+    <h1>Прототип зоомагазина</h1>
+    <nav><a href="/">Главная</a></nav>
+  </header>
+
+  <section class="products">
+    <h2>Популярные товары</h2>
+    {% for product in products %}
+      <div class="product">
+        <h3><a href="{% url 'store:product_detail' product.pk %}">{{ product.name }}</a></h3>
+        <p class="price">{{ product.price }} грн</p>
+        {% if product.image %}<img src="{{ product.image }}" alt="{{ product.name }}">{% endif %}
+        <p>{{ product.description|truncatechars:120 }}</p>
+      </div>
+    {% empty %}
+      <p>Товары отсутствуют.</p>
+    {% endfor %}
+  </section>
+
+  <footer>
+    <p>Прототип. Не для продакшна.</p>
+  </footer>
+</body>
+</html>
